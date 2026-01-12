@@ -1,0 +1,66 @@
+marquee{
+    background-color: gray;
+    padding: 10px 0;
+    font-size: clamp(1rem, 1.5vmax, 2rem);
+    font-weight: bold;
+    color: #7f0019;
+    display: flex;
+    gap: clamp(2rem, 4vmax, 6rem);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #d6ad7f;   
+}
+:root{
+    --text-red: #7f0019;
+}
+
+.sale{
+    font-size: clamp(1.8rem, 2.6vmax, 3rem);
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+.up-to{
+    font-size: clamp(1rem, 1.4vmax, 1.6rem);
+    margin: 0;
+    padding: 0;
+}
+
+.discount-off{
+    font-size: clamp(3.5rem, 3.5vmax, 10rem);
+    margin: 0;
+    padding: 0;
+}
+
+.header-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(0.2rem, 0.5vmax, 1rem);
+    color: var(--text-red);
+}
+
+.header-images{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: clamp(0.5rem, 1vmax, 1.5rem);
+    height: clamp(50px, 20vmax, 400px);
+}
+
+@media (max-width: 768px){
+    .header-images{
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        height: clamp(30px, 15vmax, 200px);
+    }
+}
